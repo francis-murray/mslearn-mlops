@@ -39,6 +39,10 @@ jobs:
         run: |
           az extension add -n ml -y
 
+      - name: Register Azure Machine Learning provider
+        run: |
+          az provider register --namespace Microsoft.MachineLearningServices --wait
+
       - name: Detect Azure ML workspace
         id: detect
         run: |
