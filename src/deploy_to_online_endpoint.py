@@ -43,7 +43,7 @@ def ensure_endpoint(ml_client: MLClient, endpoint_name: str) -> ManagedOnlineEnd
             auth_mode="key",
         )
 
-        return ml_client.begin_create_or_update(endpoint).result()
+        return ml_client.online_endpoints.begin_create_or_update(endpoint).result()
 
 
 def create_or_update_deployment(
